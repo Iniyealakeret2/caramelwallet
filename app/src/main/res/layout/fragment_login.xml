@@ -57,6 +57,10 @@
                 android:id="@+id/fragment_login_email_edt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
                 android:layout_marginTop="@dimen/margin_60dp"
                 android:hint="@string/email"
                 app:boxStrokeErrorColor="@color/red"
@@ -73,6 +77,38 @@
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragment_login_password_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:hint="@string/password"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidthFocused="@color/primary_color"
+                app:boxStrokeWidth="2dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:endIcon="clear_text"
+                app:startIconDrawable="@drawable/ic_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50dp"
+                android:id="@+id/fragment_welcome_login_btn"
+                style="@style/CaramelWalletDefaultButton"
+                android:layout_marginTop="@dimen/margin_60dp"
+                android:text="@string/login"
+                app:backgroundTint="@color/primary_color"
+                />
         </LinearLayout>
     </ScrollView>
 
