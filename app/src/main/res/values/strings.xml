@@ -18,4 +18,7 @@
     <string name="create_a_new_account">Create a new account</string>
     <string name="confirm_password">Confirm password</string>
     <string name="dashboard">Dashboard</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="_0_00">0.00</string>
+    <string name="ngn">NGN</string>
 </resources>
