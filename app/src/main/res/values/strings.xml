@@ -13,4 +13,8 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="don_t_have_an_account_sign_up">Don\'t have an account? <font color='#0386FF'>    Register</font></string>
+    <string name="have_an_account_login">Already have an account? <font color='#0386FF'>    Login</font></string>
+    <string name="hi">Hi !</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>
