@@ -8,4 +8,9 @@
     <string name="get_instant_access_to_several_services_from_one_wallet">Get instant access to several services from one wallet.</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? <font color='#0386FF'>    Register</font></string>
 </resources>
