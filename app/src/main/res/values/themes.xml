@@ -13,4 +13,29 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="CaramelWalletDefaultButton" parent = "Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/rectangle_button</item>
+        <item name="android:paddingTop">@dimen/padding_10dp</item>
+        <item name="android:paddingBottom">@dimen/padding_10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:textSize">@dimen/textSize_15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="CaramelWalletOutlinedButton" parent = "Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/rectangle_button_outlined</item>
+        <item name="android:paddingTop">@dimen/padding_10dp</item>
+        <item name="android:paddingBottom">@dimen/padding_10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textSize">@dimen/textSize_15sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="textSize_15sp">15sp</dimen>
 </resources>
