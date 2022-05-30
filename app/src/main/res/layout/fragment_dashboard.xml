@@ -85,7 +85,135 @@
                         android:textStyle="bold" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:orientation="horizontal"
+                >
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fragment_dashboard_card_one"
+                    android:layout_width="@dimen/height_180dp"
+                    android:layout_height="@dimen/height_180dp"
+                    app:cardCornerRadius="@dimen/radius_15dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/margin_5dp"
+                    app:cardBackgroundColor="@color/accent_color"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <View
+                            android:id="@+id/fragment_dashboard_card_one_View"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="@dimen/margin_20dp"
+                            android:layout_marginEnd="@dimen/margin_20dp"
+                            android:background="@drawable/circular_shape"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="37dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/icons8_credit_card_64"
+                            app:layout_constraintBottom_toBottomOf="@+id/fragment_dashboard_card_one_View"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_dashboard_card_one_View"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_dashboard_card_one_View"
+                            app:layout_constraintTop_toTopOf="@+id/fragment_dashboard_card_one_View" />
+                        <TextView
+                            android:id="@+id/fragment_dashboard_top_up_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_30dp"
+                            android:layout_gravity="center"
+                            android:text="@string/top_up"
+                            android:textColor="@color/primary_color"
+                            android:textSize="@dimen/textSize_18sp"
+                            android:layout_marginStart="@dimen/margin_20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_dashboard_card_one_View" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/click_here_to_top_up"
+                            android:textColor="@color/primary_color"
+                            android:textSize="@dimen/textSize_15sp"
+                            android:layout_marginStart="@dimen/margin_20dp"
+                            android:textStyle="normal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_dashboard_top_up_tv" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/height_180dp"
+                    android:layout_height="@dimen/height_180dp"
+                    app:cardCornerRadius="@dimen/radius_15dp"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/accent_color"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <View
+                            android:id="@+id/fragment_dashboard_card_two_View"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="@dimen/margin_20dp"
+                            android:layout_marginEnd="@dimen/margin_20dp"
+                            android:background="@drawable/circular_shape"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/icons8_card_exchange_50"
+                            app:layout_constraintBottom_toBottomOf="@+id/fragment_dashboard_card_two_View"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_dashboard_card_two_View"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_dashboard_card_two_View"
+                            app:layout_constraintTop_toTopOf="@+id/fragment_dashboard_card_two_View" />
+                        <TextView
+                            android:id="@+id/fragment_dashboard_withdraw_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_30dp"
+                            android:layout_gravity="center"
+                            android:text="@string/withdraw"
+                            android:textColor="@color/primary_color"
+                            android:textSize="@dimen/textSize_18sp"
+                            android:layout_marginStart="@dimen/margin_20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_dashboard_card_two_View" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                           android:layout_marginStart="@dimen/margin_20dp"
+                            android:text="@string/withdraw_funds"
+                            android:textColor="@color/primary_color"
+                            android:textSize="@dimen/textSize_15sp"
+                            android:textStyle="normal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_dashboard_withdraw_tv" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
