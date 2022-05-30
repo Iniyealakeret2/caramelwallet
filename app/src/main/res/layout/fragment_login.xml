@@ -103,12 +103,22 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_50dp"
-                android:id="@+id/fragment_welcome_login_btn"
+                android:id="@+id/fragment_login_login_btn"
                 style="@style/CaramelWalletDefaultButton"
                 android:layout_marginTop="@dimen/margin_60dp"
                 android:text="@string/login"
                 app:backgroundTint="@color/primary_color"
                 />
+            <TextView
+                android:id="@+id/fragment_welcome_no_account_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="@string/don_t_have_an_account_sign_up"
+                android:textColor="@color/primary_color"
+                android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
 
