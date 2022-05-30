@@ -17,4 +17,12 @@
     <string name="hi">Hi !</string>
     <string name="create_a_new_account">Create a new account</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="_0_00">0.00</string>
+    <string name="ngn">NGN</string>
+    <string name="top_up">Top Up</string>
+    <string name="click_here_to_top_up">top up your wallet balance</string>
+    <string name="withdraw">Withdraw Fund</string>
+    <string name="withdraw_funds">withdraw funds from wallet</string>
 </resources>
