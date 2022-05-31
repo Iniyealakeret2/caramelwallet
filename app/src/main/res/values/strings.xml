@@ -27,5 +27,8 @@
     <string name="withdraw_funds">withdraw funds from wallet</string>
     <string name="fund_wallet">Fund wallet</string>
     <string name="fund_wallet_message">Fund your wallet by entering your desired amount below</string>
+    <string name="withdraw_fund_message">withdraw fund from your wallet, by entering your desired amount below</string>
     <string name="enter_amount">Enter amount</string>
+    <string name="withdraw_your_funds">Withdraw your funds</string>
+    <string name="withdraw_fund">Withdraw fund</string>
 </resources>
