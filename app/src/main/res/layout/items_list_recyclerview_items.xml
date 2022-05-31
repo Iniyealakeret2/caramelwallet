@@ -11,7 +11,7 @@
         android:layout_height="@dimen/height_200"
         app:cardCornerRadius="@dimen/margin_20dp"
         android:layout_margin="@dimen/margin_10dp"
-        app:cardBackgroundColor="@color/primary_color"
+        app:cardBackgroundColor="@color/teal_200"
         app:cardElevation="@dimen/margin_4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_10dp"
                 android:text="@string/_2569"
-                android:textColor="@color/secondary_color"
+                android:textColor="@color/white"
                 android:textSize="@dimen/textSize_18sp"
                 app:layout_constraintBottom_toBottomOf="@id/id_number_tv"
                 app:layout_constraintStart_toEndOf="@+id/id_number_tv" />

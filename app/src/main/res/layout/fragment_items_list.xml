@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         android:paddingLeft="@dimen/padding_10dp"
         android:paddingRight="@dimen/padding_10dp"
-        app:elevation="@dimen/elevation_4dp"
+        app:elevation="@dimen/elevation_5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
