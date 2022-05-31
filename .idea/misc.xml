@@ -10,10 +10,12 @@
         <entry key="app/src/main/res/drawable/rectangle_button.xml" value="0.24074074074074073" />
         <entry key="app/src/main/res/drawable/rectangle_button_outlined.xml" value="0.24074074074074073" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18206521739130435" />
-        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_fund_wallet.xml" value="0.23657407407407408" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_withdraw_fund.xml" value="0.18206521739130435" />
       </map>
     </option>
   </component>
