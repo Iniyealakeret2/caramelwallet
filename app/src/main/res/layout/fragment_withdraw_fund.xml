@@ -24,7 +24,6 @@
             android:src="@drawable/back_button"
             tools:ignore="ContentDescription" />
     </androidx.appcompat.widget.Toolbar>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
