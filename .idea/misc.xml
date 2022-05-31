@@ -15,7 +15,7 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_withdraw_fund.xml" value="0.18206521739130435" />
+        <entry key="app/src/main/res/layout/fragment_withdraw_fund.xml" value="0.25" />
       </map>
     </option>
   </component>
