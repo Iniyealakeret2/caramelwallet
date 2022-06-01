@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary_color">#FF000000</color>
     <color name="tertiary_color">#352F2F</color>
-    <color name="secondary_color">#FFFFFFFF</color>
+    <color name="secondary_color">#ffffff</color>
     <color name="accent_color">#EDEDED</color>
     <color name="red">#C50000</color>
 </resources>

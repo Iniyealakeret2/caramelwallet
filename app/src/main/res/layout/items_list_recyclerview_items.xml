@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_marginBottom="@dimen/margin_10dp"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_200"
         app:cardCornerRadius="@dimen/margin_20dp"
         android:layout_margin="@dimen/margin_10dp"
-        app:cardBackgroundColor="@color/teal_200"
+        app:cardBackgroundColor="@color/tertiary_color"
         app:cardElevation="@dimen/margin_4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_10dp"
                 android:text="@string/_2569"
-                android:textColor="@color/white"
+                android:textColor="@color/secondary_color"
                 android:textSize="@dimen/textSize_18sp"
                 app:layout_constraintBottom_toBottomOf="@id/id_number_tv"
                 app:layout_constraintStart_toEndOf="@+id/id_number_tv" />
@@ -94,24 +94,21 @@
                 app:layout_constraintBottom_toBottomOf="@id/amount_title_tv"
                 app:layout_constraintStart_toEndOf="@+id/amount_title_tv" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/fragment_welcome_register_btn"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragment_buy_now_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/height_40dp"
-                android:layout_marginEnd="@dimen/margin_20dp"
-                android:layout_marginBottom="@dimen/margin_20dp"
                 android:background="@drawable/rectangle_button_outlined"
                 android:text="@string/buy_now"
                 android:textAllCaps="false"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:layout_marginEnd="@dimen/margin_20dp"
                 android:textColor="@color/primary_color"
-                app:backgroundTint="@drawable/rectangle_button_outlined"
                 app:cornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:strokeColor="@color/secondary_color"
                 app:strokeWidth="@dimen/width_2dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

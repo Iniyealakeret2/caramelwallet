@@ -1,15 +1,17 @@
 package com.hsdesigns.caramelwallet.ui.view.adapter
 
+import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.ItemsListRecyclerviewItemsBinding
 import com.hsdesigns.caramelwallet.ui.model.ListOfItemsDto
-import com.hsdesigns.caramelwallet.utils.BuyItemClickListenerInterface
 
-class ListItemRecyclerViewAdapter(private val listOfItems: List<ListOfItemsDto>, val clickListener: BuyItemClickListenerInterface) : RecyclerView.Adapter<ListItemRecyclerViewAdapter.ViewHolder>() {
+class ListItemRecyclerViewAdapter(private val listOfItems: List<ListOfItemsDto>) : RecyclerView.Adapter<ListItemRecyclerViewAdapter.ViewHolder>() {
     inner class ViewHolder(view: View):RecyclerView.ViewHolder(view)  {
         private val binding: ItemsListRecyclerviewItemsBinding = ItemsListRecyclerviewItemsBinding.bind(view)
         init {
@@ -18,11 +20,12 @@ class ListItemRecyclerViewAdapter(private val listOfItems: List<ListOfItemsDto>,
         fun bindViews(listOfItems: ListOfItemsDto){
             binding.idNumberTextTv.text = listOfItems.id
             binding.productNameTextTv.text = listOfItems.name
-            binding.amountNameTextTv.text = listOfItems.amount
+            binding.amountNameTextTv.text = listOfItems.amount.toString()
         }
          private fun buyItemClickListener(){
-            binding.fragmentWelcomeRegisterBtn.setOnClickListener {
-                clickListener.buyItemClickListener(layoutPosition)
+            binding.fragmentBuyNowBtn.setOnClickListener {
+                Log.d("TAG", "buyItemClickListener: ")
+//                clickListener.buyItemClickListener(layoutPosition)
             }
         }
     }

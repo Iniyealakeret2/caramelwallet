@@ -74,14 +74,15 @@
                 android:maxLines="1"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragment_fund_wallet_btn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_50dp"
-            style="@style/CaramelWalletDefaultButton"
             android:layout_marginTop="@dimen/margin_60dp"
             android:text="@string/fund_wallet"
-            app:backgroundTint="@color/primary_color"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_color"
+            android:background="@drawable/rectangle_button"
             />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
