@@ -11,7 +11,7 @@
         <entry key="app/src/main/res/drawable/item_selector.xml" value="0.24074074074074073" />
         <entry key="app/src/main/res/drawable/rectangle_button.xml" value="0.24074074074074073" />
         <entry key="app/src/main/res/drawable/rectangle_button_outlined.xml" value="0.24074074074074073" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_add_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_fund_wallet.xml" value="0.23657407407407408" />

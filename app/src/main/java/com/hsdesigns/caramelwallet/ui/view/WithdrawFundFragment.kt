@@ -5,8 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.FragmentWithdrawFundBinding
+import com.hsdesigns.caramelwallet.utils.handleBackPress
+import com.hsdesigns.caramelwallet.utils.popBackStack
 
 
 class WithdrawFundFragment : Fragment() {
@@ -20,5 +21,22 @@ class WithdrawFundFragment : Fragment() {
         _binding = FragmentWithdrawFundBinding.inflate(inflater, container, false)
         return binding.root
     }
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        clearFocus()
+        handleBackPress()
+        handleOnClickListeners()
+    }
+    private fun clearFocus() {
+        binding.fragmentWithdrawFundLl.setOnClickListener {
+            binding.fragmentWithdrawFundEnterAmountEdt.clearFocus()
+        }
+    }
+    private fun handleOnClickListeners(){
+        binding.fragmentWithdrawFundBackArrowIv.setOnClickListener {  popBackStack() }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

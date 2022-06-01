@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.view.DashboardFragment">
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/fragment_registration_toolbar"
+        android:id="@+id/fragment_dashboard_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/padding_10dp"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
-            android:id="@+id/fragment_user_account_backArrow_iv"
+            android:id="@+id/fragment_dashboard_backArrow_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back_button"
@@ -29,15 +29,13 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragment_registration_toolbar">
-
+        app:layout_constraintTop_toBottomOf="@id/fragment_dashboard_toolbar">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_20dp"
             android:layout_marginBottom="@dimen/margin_60dp"
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,14 +44,12 @@
                 android:textColor="@color/primary_color"
                 android:textSize="@dimen/textSize_24sp"
                 android:textStyle="bold" />
-
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_180dp"
                 android:layout_marginTop="@dimen/margin_40dp"
                 app:cardBackgroundColor="@color/primary_color"
                 app:cardCornerRadius="@dimen/radius_20dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

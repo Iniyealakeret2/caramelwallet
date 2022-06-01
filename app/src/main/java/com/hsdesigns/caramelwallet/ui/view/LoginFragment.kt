@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.hsdesigns.caramelwallet.databinding.FragmentLoginBinding
+import com.hsdesigns.caramelwallet.utils.handleBackPress
+import com.hsdesigns.caramelwallet.utils.popBackStack
 
 
 class LoginFragment : Fragment() {
@@ -16,8 +18,26 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        clearFocus()
+        handleBackPress()
+        handleOnClickListeners()
+    }
+    private fun clearFocus() {
+        binding.fragmentLoginLl.setOnClickListener {
+            binding.fragmentLoginEmailEdt.clearFocus()
+        }
+    }
+    private fun handleOnClickListeners(){
+        binding.fragmentUserAccountBackArrowIv.setOnClickListener {  popBackStack() }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

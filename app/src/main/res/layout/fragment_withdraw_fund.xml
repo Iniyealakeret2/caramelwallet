@@ -25,10 +25,12 @@
             tools:ignore="ContentDescription" />
     </androidx.appcompat.widget.Toolbar>
     <LinearLayout
+        android:id="@+id/fragment_withdraw_fund_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_20dp"
         android:orientation="vertical"
+        android:focusableInTouchMode="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment_withdraw_fund_toolbar">
@@ -59,7 +61,6 @@
             android:layout_marginTop="@dimen/margin_40dp"
             android:hint="@string/enter_amount"
             app:boxStrokeErrorColor="@color/red"
-            app:boxStrokeWidthFocused="@color/primary_color"
             app:boxStrokeWidth="2dp"
             app:endIconMode="clear_text"
             app:startIconDrawable="@drawable/icons8_naira_24"

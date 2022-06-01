@@ -29,9 +29,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment_add_item_toolbar">
         <LinearLayout
+            android:id="@+id/fragment_list_item_ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_20dp"
+            android:focusableInTouchMode="true"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -67,7 +69,7 @@
                     android:id="@+id/fragment_enter_product_id_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -89,7 +91,7 @@
                     android:id="@+id/fragment_enter_product_name_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textCapWords"
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -111,7 +113,7 @@
                     android:id="@+id/fragment_enter_product_amount_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>

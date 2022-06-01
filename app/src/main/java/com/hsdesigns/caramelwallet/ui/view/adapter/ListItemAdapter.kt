@@ -1,17 +1,15 @@
 package com.hsdesigns.caramelwallet.ui.view.adapter
 
-import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.ItemsListRecyclerviewItemsBinding
 import com.hsdesigns.caramelwallet.ui.model.ListOfItemsDto
 
-class ListItemRecyclerViewAdapter(private val listOfItems: List<ListOfItemsDto>) : RecyclerView.Adapter<ListItemRecyclerViewAdapter.ViewHolder>() {
+class ListItemAdapter(private val listOfItems: List<ListOfItemsDto>) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
     inner class ViewHolder(view: View):RecyclerView.ViewHolder(view)  {
         private val binding: ItemsListRecyclerviewItemsBinding = ItemsListRecyclerviewItemsBinding.bind(view)
         init {
