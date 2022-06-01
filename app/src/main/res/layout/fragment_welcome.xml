@@ -55,25 +55,24 @@
             android:textSize="@dimen/textSize_20sp"
             android:textColor="@color/primary_color"
             />
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_50dp"
             android:id="@+id/fragment_welcome_login_btn"
-            style="@style/CaramelWalletDefaultButton"
             android:layout_marginTop="@dimen/margin_40dp"
             android:text="@string/login"
-            app:backgroundTint="@color/primary_color"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_color"
+            android:background="@drawable/rectangle_button"
             />
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragment_welcome_register_btn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_50dp"
+            android:background="@drawable/rectangle_button_outlined"
             app:strokeWidth="@dimen/width_2dp"
             app:cornerRadius="10dp"
             android:textAllCaps="false"
-            app:strokeColor="@color/secondary_color"
-            app:backgroundTint="@drawable/rectangle_button_outlined"
-            android:background="@drawable/rectangle_button_outlined"
             android:layout_marginTop="@dimen/margin_40dp"
             android:textColor="@color/primary_color"
             android:text="@string/register"

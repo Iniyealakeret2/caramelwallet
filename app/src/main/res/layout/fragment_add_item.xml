@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.view.RegistrationFragment">
+    tools:context=".ui.view.AddItemFragment">
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/fragment_registration_toolbar"
+        android:id="@+id/fragment_add_item_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/padding_10dp"
@@ -16,30 +16,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
-            android:id="@+id/fragment_user_account_backArrow_iv"
+            android:id="@+id/fragment_add_item_backArrow_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back_button"
             tools:ignore="ContentDescription"/>
     </androidx.appcompat.widget.Toolbar>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragment_registration_toolbar"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/fragment_add_item_toolbar">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_20dp"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_40dp"
-                android:text="@string/hi"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:text="@string/list_your_item"
                 android:textColor="@color/primary_color"
                 android:textSize="@dimen/textSize_32sp"
                 android:textStyle="bold" />
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_20dp"
-                android:text="@string/create_a_new_account"
+                android:text="@string/list_your_items_here"
                 android:textColor="@color/primary_color"
                 android:textSize="@dimen/textSize_20sp" />
             <com.google.android.material.textfield.TextInputLayout
@@ -59,15 +59,14 @@
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 android:layout_marginTop="@dimen/margin_60dp"
-                android:hint="@string/email"
+                android:hint="@string/enter_product_id"
                 app:boxStrokeErrorColor="@color/red"
                 app:boxStrokeWidthFocused="@color/primary_color"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="clear_text"
-                app:startIconDrawable="@drawable/ic_email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/fragment_register_email_edt"
+                    android:id="@+id/fragment_enter_product_id_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
@@ -77,67 +76,58 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_40dp"
-                android:hint="@string/password"
-                app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
-                app:boxStrokeWidth="2dp"
                 app:boxCornerRadiusTopStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
-                app:endIconMode="password_toggle"
-                app:startIconDrawable="@drawable/ic_password"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:hint="@string/enter_product_name"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidthFocused="@color/primary_color"
+                app:boxStrokeWidth="2dp"
+                app:endIconMode="clear_text"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/fragment_resgister_password_edt"
+                    android:id="@+id/fragment_enter_product_name_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:maxLines="1" />
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_40dp"
-                android:hint="@string/confirm_password"
-                app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
-                app:boxStrokeWidth="2dp"
                 app:boxCornerRadiusTopStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
-                app:endIconMode="password_toggle"
-                app:startIconDrawable="@drawable/ic_password"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:hint="@string/enter_product_amount"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidthFocused="@color/primary_color"
+                app:boxStrokeWidth="2dp"
+                app:endIconMode="clear_text"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/fragment_register_confirm_password_edt"
+                    android:id="@+id/fragment_enter_product_amount_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:maxLines="1" />
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/fragment_register_btn"
+                android:id="@+id/fragment_login_login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_50dp"
                 android:layout_marginTop="@dimen/margin_60dp"
-                android:text="@string/register"
+                android:text="@string/upload"
                 android:textAllCaps="false"
                 android:textColor="@color/secondary_color"
                 android:background="@drawable/rectangle_button"
                 />
-            <TextView
-                android:id="@+id/fragment_welcome_no_account_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_20dp"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:text="@string/have_an_account_login"
-                android:textColor="@color/primary_color"
-                android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

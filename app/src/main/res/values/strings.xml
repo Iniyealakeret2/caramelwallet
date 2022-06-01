@@ -31,4 +31,20 @@
     <string name="enter_amount">Enter amount</string>
     <string name="withdraw_your_funds">Withdraw your funds</string>
     <string name="withdraw_fund">Withdraw fund</string>
+    <string name="id">ID:</string>
+    <string name="_2569">2569</string>
+    <string name="name">Name:</string>
+    <string name="sauced_pepper_meat">Sauced Pepper Meat</string>
+    <string name="amount">Amount:</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="list_item">List Item</string>
+    <string name="list_an_item_you_want_to_sell">list an item you want to sell</string>
+    <string name="view_items">View Items</string>
+    <string name="view_the_list_of_all_available_items">view the list of all available items</string>
+    <string name="list_your_item">List your item</string>
+    <string name="list_your_items_here">list your items here for customers to view and buy</string>
+    <string name="enter_product_name">Enter product Name</string>
+    <string name="enter_product_id">Enter product ID</string>
+    <string name="enter_product_amount">Enter product Amount</string>
+    <string name="upload">Upload</string>
 </resources>
