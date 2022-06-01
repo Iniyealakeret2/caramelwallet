@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/remove_red_eye/baseline_remove_red_eye_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/home/baseline_home_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_undraw_credit_card_re_blml" />
+                            <entry key="outputName" value="ic_baseline_home_24" />
                             <entry key="sourceFile" value="$PROJECT_DIR$/../../Wallet Task resources/undraw_credit_card_re_blml.svg" />
                           </map>
                         </option>

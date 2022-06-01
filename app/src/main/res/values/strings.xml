@@ -42,9 +42,12 @@
     <string name="view_items">View Items</string>
     <string name="view_the_list_of_all_available_items">view the list of all available items</string>
     <string name="list_your_item">List your item</string>
-    <string name="list_your_items_here">list your items here for customers to view and buy</string>
+    <string name="list_your_items_here">list your items for customers to view and buy</string>
     <string name="enter_product_name">Enter product Name</string>
     <string name="enter_product_id">Enter product ID</string>
     <string name="enter_product_amount">Enter product Amount</string>
     <string name="upload">Upload</string>
+    <string name="profile">Profile</string>
+    <string name="products">Products</string>
+    <string name="home">Home</string>
 </resources>

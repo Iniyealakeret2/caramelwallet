@@ -22,9 +22,6 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
     </fragment>
@@ -48,14 +45,17 @@
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_dashboardFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
             android:id="@+id/action_dashboardFragment_to_fundWalletFragment"
             app:destination="@id/fundWalletFragment" />
         <action
             android:id="@+id/action_dashboardFragment_to_withdrawFundFragment"
             app:destination="@id/withdrawFundFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_itemsListFragment"
+            app:destination="@id/itemsListFragment" />
     </fragment>
     <fragment
         android:id="@+id/itemsListFragment"
@@ -67,4 +67,9 @@
         android:name="com.hsdesigns.caramelwallet.ui.view.FundWalletFragment"
         android:label="fragment_fund_wallet"
         tools:layout="@layout/fragment_fund_wallet" />
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.hsdesigns.caramelwallet.ui.view.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" />
 </navigation>
