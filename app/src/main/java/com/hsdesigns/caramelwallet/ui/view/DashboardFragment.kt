@@ -5,9 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.FragmentDashboardBinding
-import com.hsdesigns.caramelwallet.utils.handleBackPress
-import com.hsdesigns.caramelwallet.utils.popBackStack
+import com.hsdesigns.caramelwallet.utils.*
+
+//import com.hsdesigns.caramelwallet.utils.showBottomNavigation
 
 
 class DashboardFragment : Fragment() {
@@ -23,12 +26,30 @@ class DashboardFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         handleBackPress()
         handleOnClickListeners()
+//        showBottomNavigation()
+//        hideBottomNavigation()
+        binding.fragmentDashboardBackArrowIv.setOnClickListener {
+            findNavController().popBackStack(R.id.loginFragment,false)
+        }
     }
     private fun handleOnClickListeners(){
-        binding.fragmentDashboardBackArrowIv.setOnClickListener {  popBackStack() }
+        with(binding){
+            fragmentDashboardCardOne.setOnClickListener {
+                findNavController().navigate(DashboardFragmentDirections.actionDashboardFragmentToFundWalletFragment(), customNavAnimation().build())
+            }
+           fragmentDashboardCardTwo.setOnClickListener {
+               findNavController().navigate(DashboardFragmentDirections.actionDashboardFragmentToWithdrawFundFragment(), customNavAnimation().build())
+           }
+            fragmentDashboardCardThree.setOnClickListener {
+                findNavController().navigate(DashboardFragmentDirections.actionDashboardFragmentToAddItemFragment(), customNavAnimation().build())
+            }
+           fragmentDashboardCardFour.setOnClickListener {
+               findNavController().navigate(DashboardFragmentDirections.actionDashboardFragmentToItemsListFragment(), customNavAnimation().build())
+           }
+        }
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

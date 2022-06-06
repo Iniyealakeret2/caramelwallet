@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.hsdesigns.caramelwallet.databinding.FragmentWithdrawFundBinding
-import com.hsdesigns.caramelwallet.utils.handleBackPress
-import com.hsdesigns.caramelwallet.utils.popBackStack
+import com.hsdesigns.caramelwallet.utils.*
+
+//import com.hsdesigns.caramelwallet.utils.showBottomNavigation
 
 
 class WithdrawFundFragment : Fragment() {
@@ -26,14 +28,23 @@ class WithdrawFundFragment : Fragment() {
         clearFocus()
         handleBackPress()
         handleOnClickListeners()
+//        showBottomNavigation()
+//        hideBottomNavigation()
     }
     private fun clearFocus() {
-        binding.fragmentWithdrawFundLl.setOnClickListener {
-            binding.fragmentWithdrawFundEnterAmountEdt.clearFocus()
+        with(binding){
+            fragmentWithdrawFundLl.setOnClickListener {
+                fragmentWithdrawFundEnterAmountEdt.clearFocus()
+            }
         }
     }
     private fun handleOnClickListeners(){
-        binding.fragmentWithdrawFundBackArrowIv.setOnClickListener {  popBackStack() }
+        with(binding){
+            fragmentWithdrawFundBackArrowIv.setOnClickListener {  findNavController().popBackStack() }
+            fragmentWithdrawFundBtn.setOnClickListener {
+                findNavController().navigate(WithdrawFundFragmentDirections.actionWithdrawFundFragmentToDashboardFragment(), customNavAnimation().build())
+            }
+        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

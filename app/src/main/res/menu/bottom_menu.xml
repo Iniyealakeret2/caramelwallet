@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home" android:icon="@drawable/ic_baseline_home_24" android:id="@+id/dashboardFragment"/>
+    <item android:title="Withdraw" android:icon="@drawable/ic_transfer_money" android:id="@+id/withdrawFundFragment"/>
+    <item android:title="Fund" android:icon="@drawable/icons8_credit_card_64" android:id="@+id/fundWalletFragment"/>
+<!--    <item android:title="Items" android:icon="@drawable/ic_baseline_insert_drive_file_24" android:id="@+id/itemsListFragment"/>-->
+<!--    <item android:title="Add" android:icon="@drawable/icons8_add_50" android:id="@+id/addItemFragment"/>-->
+</menu>

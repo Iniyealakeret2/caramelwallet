@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.FragmentWelcomeBinding
 import com.hsdesigns.caramelwallet.utils.customNavAnimation
-import com.hsdesigns.caramelwallet.utils.hideBottomNavigation
+import com.hsdesigns.caramelwallet.utils.*
+
 
 class WelcomeFragment : Fragment() {
     private  var _binding : FragmentWelcomeBinding? = null
@@ -25,15 +25,20 @@ class WelcomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        hideBottomNavigation()
-        activateClickListener()
+//        hideBottomNavigation()
+        handleAllClickListeners()
     }
-    private fun activateClickListener() {
+    private fun handleAllClickListeners() {
         binding.fragmentWelcomeLoginBtn.setOnClickListener {
             findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToLoginFragment(), customNavAnimation().build())
         }
         binding.fragmentWelcomeRegisterBtn.setOnClickListener {
-            findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToRegistrationFragment(), customNavAnimation().build())
+            findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToRegistrationFragment(),customNavAnimation().build())
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

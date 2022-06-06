@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.hsdesigns.caramelwallet.databinding.FragmentLoginBinding
-import com.hsdesigns.caramelwallet.utils.handleBackPress
-import com.hsdesigns.caramelwallet.utils.popBackStack
+import com.hsdesigns.caramelwallet.utils.*
 
 
 class LoginFragment : Fragment() {
@@ -25,17 +25,29 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         clearFocus()
-        handleBackPress()
         handleOnClickListeners()
+        handleBackPress()
+//        hideBottomNavigation()
+        binding.fragmentUserLoginBackArrowIv.setOnClickListener {  handlePopBackStack() }
     }
     private fun clearFocus() {
-        binding.fragmentLoginLl.setOnClickListener {
-            binding.fragmentLoginEmailEdt.clearFocus()
+        with(binding){
+            fragmentLoginLl.setOnClickListener {
+                fragmentLoginEmailEdt.clearFocus()
+            }
         }
     }
     private fun handleOnClickListeners(){
-        binding.fragmentUserAccountBackArrowIv.setOnClickListener {  popBackStack() }
+        with(binding){
+            fragmentLoginLoginBtn.setOnClickListener {
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToDashboardFragment(),customNavAnimation().build())
+            }
+            fragmentLoginNoAccountTv.setOnClickListener {
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegistrationFragment(), customNavAnimation().build())
+            }
+        }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

@@ -1,17 +1,20 @@
 package com.hsdesigns.caramelwallet.ui.view.adapter
 
+import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.ItemsListRecyclerviewItemsBinding
 import com.hsdesigns.caramelwallet.ui.model.ListOfItemsDto
 
-class ListItemAdapter(private val listOfItems: List<ListOfItemsDto>) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
+class ListItemAdapter(private val listOfItems: List<ListOfItemsDto>, val context: Context) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
     inner class ViewHolder(view: View):RecyclerView.ViewHolder(view)  {
         private val binding: ItemsListRecyclerviewItemsBinding = ItemsListRecyclerviewItemsBinding.bind(view)
+        var btn = binding.fragmentBuyNowBtn
         init {
             buyItemClickListener()
         }
@@ -35,6 +38,9 @@ class ListItemAdapter(private val listOfItems: List<ListOfItemsDto>) : RecyclerV
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindViews(listOfItems[position])
+        holder.btn.setOnClickListener {
+            Toast.makeText(context, listOfItems[position].name, Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun getItemCount(): Int {

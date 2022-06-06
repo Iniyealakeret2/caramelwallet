@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/welcomeFragment">
+
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.hsdesigns.caramelwallet.ui.view.WelcomeFragment"
@@ -23,7 +24,22 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+            app:destination="@id/dashboardFragment"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/loginFragment"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/welcomeFragment"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/loginFragment"
+            />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -31,45 +47,91 @@
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action
+            android:id="@+id/action_registrationFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/welcomeFragment"
+            />
+        <action
             android:id="@+id/action_registrationFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/loginFragment"/>
     </fragment>
-    <fragment
-        android:id="@+id/withdrawFundFragment"
-        android:name="com.hsdesigns.caramelwallet.ui.view.WithdrawFundFragment"
-        android:label="fragment_withdraw_fund"
-        tools:layout="@layout/fragment_withdraw_fund" />
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.hsdesigns.caramelwallet.ui.view.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
+            android:id="@+id/action_dashboardFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment"
+            app:popUpTo="@id/addItemFragment"
+            app:popUpToInclusive="false"
+            />
+        <action
             android:id="@+id/action_dashboardFragment_to_fundWalletFragment"
-            app:destination="@id/fundWalletFragment" />
+            app:destination="@id/fundWalletFragment"
+            app:popUpTo="@id/fundWalletFragment"
+            app:popUpToInclusive="false"
+            />
         <action
             android:id="@+id/action_dashboardFragment_to_withdrawFundFragment"
-            app:destination="@id/withdrawFundFragment" />
-        <action
-            android:id="@+id/action_dashboardFragment_to_addItemFragment"
-            app:destination="@id/addItemFragment" />
+            app:destination="@id/withdrawFundFragment"
+            app:popUpTo="@id/withdrawFundFragment"
+            app:popUpToInclusive="false"
+            />
         <action
             android:id="@+id/action_dashboardFragment_to_itemsListFragment"
-            app:destination="@id/itemsListFragment" />
+            app:destination="@id/itemsListFragment"
+            app:popUpTo="@id/itemsListFragment"
+            app:popUpToInclusive="false"
+            />
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.hsdesigns.caramelwallet.ui.view.AddItemFragment"
+        android:label="fragment_add_item"
+        tools:layout="@layout/fragment_add_item" >
+        <action
+            android:id="@+id/action_addItemFragment_to_itemsListFragment"
+            app:destination="@id/itemsListFragment"
+            app:popUpTo="@id/addItemFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fundWalletFragment"
+        android:name="com.hsdesigns.caramelwallet.ui.view.FundWalletFragment"
+        android:label="fragment_fund_wallet"
+        tools:layout="@layout/fragment_fund_wallet" >
+        <action
+            android:id="@+id/action_fundWalletFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/fundWalletFragment"
+            app:popUpToInclusive="false"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/withdrawFundFragment"
+        android:name="com.hsdesigns.caramelwallet.ui.view.WithdrawFundFragment"
+        android:label="fragment_withdraw_fund"
+        tools:layout="@layout/fragment_withdraw_fund" >
+        <action
+            android:id="@+id/action_withdrawFundFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/withdrawFundFragment"
+            app:popUpToInclusive="false"
+            />
     </fragment>
     <fragment
         android:id="@+id/itemsListFragment"
         android:name="com.hsdesigns.caramelwallet.ui.view.ItemsListFragment"
         android:label="fragment_items_list"
         tools:layout="@layout/fragment_items_list" />
-    <fragment
-        android:id="@+id/fundWalletFragment"
-        android:name="com.hsdesigns.caramelwallet.ui.view.FundWalletFragment"
-        android:label="fragment_fund_wallet"
-        tools:layout="@layout/fragment_fund_wallet" />
-    <fragment
-        android:id="@+id/addItemFragment"
-        android:name="com.hsdesigns.caramelwallet.ui.view.AddItemFragment"
-        android:label="fragment_add_item"
-        tools:layout="@layout/fragment_add_item" />
 </navigation>
