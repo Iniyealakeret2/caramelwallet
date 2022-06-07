@@ -30,9 +30,11 @@
         app:layout_constraintTop_toBottomOf="@id/fragment_registration_toolbar"
         >
         <LinearLayout
+            android:id="@+id/fragment_registration_ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_20dp"
+            android:focusableInTouchMode="true"
             android:orientation="vertical"
             >
             <TextView
@@ -52,6 +54,7 @@
                 android:textColor="@color/primary_color"
                 android:textSize="@dimen/textSize_20sp" />
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:boxCornerRadiusTopStart="10dp"
@@ -59,18 +62,17 @@
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 android:layout_marginTop="@dimen/margin_60dp"
-                android:hint="@string/email"
+                android:hint="@string/full_name"
                 app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="clear_text"
-                app:startIconDrawable="@drawable/ic_email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fragment_register_email_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:inputType="textCapWords"
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -78,38 +80,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_40dp"
-                android:hint="@string/password"
+                android:hint="@string/email"
                 app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
                 app:boxStrokeWidth="2dp"
                 app:boxCornerRadiusTopStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
-                app:endIconMode="password_toggle"
-                app:startIconDrawable="@drawable/ic_password"
+                app:endIconMode="clear_text"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fragment_resgister_password_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
+                    android:inputType="textEmailAddress"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_40dp"
-                android:hint="@string/confirm_password"
+                android:hint="@string/password"
                 app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
                 app:boxStrokeWidth="2dp"
                 app:boxCornerRadiusTopStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:endIconMode="password_toggle"
-                app:startIconDrawable="@drawable/ic_password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fragment_register_confirm_password_edt"
@@ -129,7 +127,7 @@
                 android:background="@drawable/rectangle_button"
                 />
             <TextView
-                android:id="@+id/fragment_welcome_no_account_tv"
+                android:id="@+id/fragment_have_account_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_20dp"

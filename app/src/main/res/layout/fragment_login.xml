@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
-            android:id="@+id/fragment_user_account_backArrow_iv"
+            android:id="@+id/fragment_user_login_backArrow_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back_button"
@@ -32,9 +32,11 @@
         app:layout_constraintTop_toBottomOf="@id/fragment_user_account_toolbar"
         >
         <LinearLayout
+            android:id="@+id/fragment_login_ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_20dp"
+            android:focusableInTouchMode="true"
             android:orientation="vertical"
             >
             <TextView
@@ -63,12 +65,11 @@
                 android:layout_marginTop="@dimen/margin_60dp"
                 android:hint="@string/email"
                 app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
+                android:clickable="true"
+                android:focusable="true"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="clear_text"
-                app:startIconDrawable="@drawable/ic_email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fragment_login_email_edt"
                     android:layout_width="match_parent"
@@ -83,16 +84,13 @@
                 android:layout_marginTop="@dimen/margin_40dp"
                 android:hint="@string/password"
                 app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
                 app:boxStrokeWidth="2dp"
                 app:boxCornerRadiusTopStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:endIconMode="password_toggle"
-                app:startIconDrawable="@drawable/ic_password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fragment_login_password_edt"
                     android:layout_width="match_parent"
@@ -111,7 +109,7 @@
                 android:background="@drawable/rectangle_button"
                 />
             <TextView
-                android:id="@+id/fragment_welcome_no_account_tv"
+                android:id="@+id/fragment_login_no_account_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_20dp"

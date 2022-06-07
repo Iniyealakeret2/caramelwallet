@@ -22,18 +22,18 @@
             android:src="@drawable/back_button"
             tools:ignore="ContentDescription"/>
     </androidx.appcompat.widget.Toolbar>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment_add_item_toolbar">
-
         <LinearLayout
+            android:id="@+id/fragment_list_item_ll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_20dp"
+            android:focusableInTouchMode="true"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -61,7 +61,6 @@
                 android:layout_marginTop="@dimen/margin_60dp"
                 android:hint="@string/enter_product_id"
                 app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="clear_text"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -69,7 +68,7 @@
                     android:id="@+id/fragment_enter_product_id_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -83,7 +82,6 @@
                 android:layout_marginTop="@dimen/margin_20dp"
                 android:hint="@string/enter_product_name"
                 app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="clear_text"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -91,7 +89,7 @@
                     android:id="@+id/fragment_enter_product_name_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textCapWords"
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
@@ -105,7 +103,6 @@
                 android:layout_marginTop="@dimen/margin_20dp"
                 android:hint="@string/enter_product_amount"
                 app:boxStrokeErrorColor="@color/red"
-                app:boxStrokeWidthFocused="@color/primary_color"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="clear_text"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -113,12 +110,12 @@
                     android:id="@+id/fragment_enter_product_amount_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:maxLines="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/fragment_login_login_btn"
+                android:id="@+id/fragment_add_item_btn"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_50dp"
                 android:layout_marginTop="@dimen/margin_60dp"
@@ -129,5 +126,4 @@
                 />
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

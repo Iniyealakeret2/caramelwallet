@@ -1,18 +1,18 @@
 package com.hsdesigns.caramelwallet.ui.view
 
 import android.os.Bundle
-import android.text.Layout
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.FragmentItemsListBinding
 import com.hsdesigns.caramelwallet.ui.model.ListOfItemsDto
-import com.hsdesigns.caramelwallet.ui.view.adapter.ListItemRecyclerViewAdapter
-import com.hsdesigns.caramelwallet.utils.BuyItemClickListenerInterface
-import com.hsdesigns.caramelwallet.utils.listItemData
+import com.hsdesigns.caramelwallet.ui.view.adapter.ListItemAdapter
+import com.hsdesigns.caramelwallet.utils.*
+
+//import com.hsdesigns.caramelwallet.utils.showBottomNavigation
 
 
 class ItemsListFragment : Fragment() {
@@ -29,12 +29,25 @@ class ItemsListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        handleBackPress()
+        handleOnClickListeners()
         initRecyclerview(listItemData)
+//        showBottomNavigation()
+//        hideBottomNavigation()
     }
     private fun initRecyclerview(listOfItems: List<ListOfItemsDto>) {
-        val listItemRecyclerviewAdapter = ListItemRecyclerViewAdapter(listOfItems)
+        val listItemRecyclerviewAdapter = ListItemAdapter(listOfItems,requireContext())
         val recyclerview = binding.fragmentItemsListRV
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
         recyclerview.adapter = listItemRecyclerviewAdapter
     }
+    private fun handleOnClickListeners(){
+        binding.fragmentItemListBackArrowIv.setOnClickListener {  findNavController().popBackStack() }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }
