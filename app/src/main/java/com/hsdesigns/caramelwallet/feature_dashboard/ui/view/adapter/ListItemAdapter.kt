@@ -9,19 +9,19 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.ItemsListRecyclerviewItemsBinding
-import com.hsdesigns.caramelwallet.feature_authentication.ui.model.ListOfItemsDto
+import com.hsdesigns.caramelwallet.feature_dashboard.data.remote.dto.ProductsDto
 
-class ListItemAdapter(private val listOfItems: List<ListOfItemsDto>, val context: Context) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
+class ListItemAdapter(private val listOfItems: List<ProductsDto>, val context: Context) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
     inner class ViewHolder(view: View):RecyclerView.ViewHolder(view)  {
         private val binding: ItemsListRecyclerviewItemsBinding = ItemsListRecyclerviewItemsBinding.bind(view)
         var btn = binding.fragmentBuyNowBtn
         init {
             buyItemClickListener()
         }
-        fun bindViews(listOfItems: ListOfItemsDto){
-            binding.idNumberTextTv.text = listOfItems.id
-            binding.productNameTextTv.text = listOfItems.name
-            binding.amountNameTextTv.text = listOfItems.amount.toString()
+        fun bindViews(products: ProductsDto){
+            binding.idNumberTextTv.text = products.id
+            binding.productNameTextTv.text = products.name
+            binding.amountNameTextTv.text = products.amount.toString()
         }
          private fun buyItemClickListener(){
             binding.fragmentBuyNowBtn.setOnClickListener {

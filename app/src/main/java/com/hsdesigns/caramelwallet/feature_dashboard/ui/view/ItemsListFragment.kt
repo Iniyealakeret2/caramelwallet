@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hsdesigns.caramelwallet.databinding.FragmentItemsListBinding
-import com.hsdesigns.caramelwallet.feature_authentication.ui.model.ListOfItemsDto
+import com.hsdesigns.caramelwallet.feature_dashboard.data.remote.dto.ProductsDto
 import com.hsdesigns.caramelwallet.feature_dashboard.ui.view.adapter.ListItemAdapter
 import com.hsdesigns.caramelwallet.common.utils.*
 
@@ -36,7 +36,7 @@ class ItemsListFragment : Fragment() {
 //        showBottomNavigation()
 //        hideBottomNavigation()
     }
-    private fun initRecyclerview(listOfItems: List<ListOfItemsDto>) {
+    private fun initRecyclerview(listOfItems: List<ProductsDto>) {
         val listItemRecyclerviewAdapter = ListItemAdapter(listOfItems,requireContext())
         val recyclerview = binding.fragmentItemsListRV
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
