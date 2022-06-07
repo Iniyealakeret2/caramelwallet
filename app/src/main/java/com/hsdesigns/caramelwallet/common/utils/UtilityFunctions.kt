@@ -1,15 +1,12 @@
-package com.hsdesigns.caramelwallet.utils
+package com.hsdesigns.caramelwallet.common.utils
 
-import android.content.DialogInterface
 import android.view.KeyEvent
-import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.hsdesigns.caramelwallet.R
 
 //fun Fragment.hideBottomNavigation(){

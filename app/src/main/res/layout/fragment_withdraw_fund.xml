@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.view.WithdrawFundFragment">
+    tools:context=".feature_dashboard.ui.view.WithdrawFundFragment">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/fragment_withdraw_fund_toolbar"
         android:layout_width="match_parent"

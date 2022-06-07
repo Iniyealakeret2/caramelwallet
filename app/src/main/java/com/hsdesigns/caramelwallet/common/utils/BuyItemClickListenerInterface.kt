@@ -1,6 +1,4 @@
-package com.hsdesigns.caramelwallet.utils
-
-import android.view.View
+package com.hsdesigns.caramelwallet.common.utils
 
 interface BuyItemClickListenerInterface {
     fun buyItemClickListener(position: Int)

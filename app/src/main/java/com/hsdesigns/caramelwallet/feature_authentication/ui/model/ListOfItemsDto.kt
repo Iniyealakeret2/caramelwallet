@@ -1,4 +1,4 @@
-package com.hsdesigns.caramelwallet.ui.model
+package com.hsdesigns.caramelwallet.feature_authentication.ui.model
 
 data class ListOfItemsDto(
     val id: String,

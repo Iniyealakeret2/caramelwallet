@@ -1,4 +1,4 @@
-package com.hsdesigns.caramelwallet.ui.view
+package com.hsdesigns.caramelwallet.feature_authentication.ui.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.hsdesigns.caramelwallet.databinding.FragmentWelcomeBinding
-import com.hsdesigns.caramelwallet.utils.customNavAnimation
-import com.hsdesigns.caramelwallet.utils.*
+import com.hsdesigns.caramelwallet.common.utils.customNavAnimation
 
 
 class WelcomeFragment : Fragment() {

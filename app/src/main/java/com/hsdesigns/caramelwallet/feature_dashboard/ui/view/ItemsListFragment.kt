@@ -1,4 +1,4 @@
-package com.hsdesigns.caramelwallet.ui.view
+package com.hsdesigns.caramelwallet.feature_dashboard.ui.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hsdesigns.caramelwallet.databinding.FragmentItemsListBinding
-import com.hsdesigns.caramelwallet.ui.model.ListOfItemsDto
-import com.hsdesigns.caramelwallet.ui.view.adapter.ListItemAdapter
-import com.hsdesigns.caramelwallet.utils.*
+import com.hsdesigns.caramelwallet.feature_authentication.ui.model.ListOfItemsDto
+import com.hsdesigns.caramelwallet.feature_dashboard.ui.view.adapter.ListItemAdapter
+import com.hsdesigns.caramelwallet.common.utils.*
 
-//import com.hsdesigns.caramelwallet.utils.showBottomNavigation
+//import com.hsdesigns.caramelwallet.common.utils.showBottomNavigation
 
 
 class ItemsListFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.hsdesigns.caramelwallet.ui.view.adapter
+package com.hsdesigns.caramelwallet.feature_dashboard.ui.view.adapter
 
 import android.content.Context
 import android.util.Log
@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.ItemsListRecyclerviewItemsBinding
-import com.hsdesigns.caramelwallet.ui.model.ListOfItemsDto
+import com.hsdesigns.caramelwallet.feature_authentication.ui.model.ListOfItemsDto
 
 class ListItemAdapter(private val listOfItems: List<ListOfItemsDto>, val context: Context) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
     inner class ViewHolder(view: View):RecyclerView.ViewHolder(view)  {

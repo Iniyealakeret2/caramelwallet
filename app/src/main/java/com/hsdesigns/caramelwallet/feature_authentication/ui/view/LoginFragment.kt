@@ -1,4 +1,4 @@
-package com.hsdesigns.caramelwallet.ui.view
+package com.hsdesigns.caramelwallet.feature_authentication.ui.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.hsdesigns.caramelwallet.databinding.FragmentLoginBinding
-import com.hsdesigns.caramelwallet.utils.*
+import com.hsdesigns.caramelwallet.common.utils.*
 
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

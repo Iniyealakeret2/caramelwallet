@@ -1,4 +1,4 @@
-package com.hsdesigns.caramelwallet.ui.view
+package com.hsdesigns.caramelwallet.feature_dashboard.ui.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.FragmentDashboardBinding
-import com.hsdesigns.caramelwallet.utils.*
+import com.hsdesigns.caramelwallet.common.utils.*
 
-//import com.hsdesigns.caramelwallet.utils.showBottomNavigation
+//import com.hsdesigns.caramelwallet.common.utils.showBottomNavigation
 
 
 class DashboardFragment : Fragment() {

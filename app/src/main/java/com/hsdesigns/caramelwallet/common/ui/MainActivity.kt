@@ -1,12 +1,7 @@
-package com.hsdesigns.caramelwallet.ui.view
+package com.hsdesigns.caramelwallet.common.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

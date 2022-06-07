@@ -1,6 +1,6 @@
-package com.hsdesigns.caramelwallet.utils
+package com.hsdesigns.caramelwallet.common.utils
 
-import com.hsdesigns.caramelwallet.ui.model.ListOfItemsDto
+import com.hsdesigns.caramelwallet.feature_authentication.ui.model.ListOfItemsDto
 
 val listItemData = mutableListOf(
     ListOfItemsDto("12345", "Mattress",5000),
