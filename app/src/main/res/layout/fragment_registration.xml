@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.view.RegistrationFragment">
+    tools:context=".feature_authentication.ui.view.RegistrationFragment">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/fragment_registration_toolbar"
         android:layout_width="match_parent"

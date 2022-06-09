@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.view.LoginFragment">
+    tools:context=".feature_authentication.ui.view.LoginFragment">
     <!--    User Account toolbar-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/fragment_user_account_toolbar"
