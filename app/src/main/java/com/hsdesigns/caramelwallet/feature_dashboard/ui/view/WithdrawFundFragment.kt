@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.hsdesigns.caramelwallet.databinding.FragmentWithdrawFundBinding
 import com.hsdesigns.caramelwallet.common.utils.*
 
@@ -41,7 +42,7 @@ class WithdrawFundFragment : Fragment() {
         with(binding){
             fragmentWithdrawFundBackArrowIv.setOnClickListener {  findNavController().popBackStack() }
             fragmentWithdrawFundBtn.setOnClickListener {
-                findNavController().navigate(com.hsdesigns.caramelwallet.feature_authentication.ui.view.WithdrawFundFragmentDirections.actionWithdrawFundFragmentToDashboardFragment(), customNavAnimation().build())
+                findNavController().navigate(WithdrawFundFragmentDirections.actionWithdrawFundFragmentToDashboardFragment(), customNavAnimation().build())
             }
         }
     }

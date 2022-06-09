@@ -10,6 +10,6 @@ interface CaramelWalletAPI {
     @POST("/login")
     suspend fun login(@Body loginRequest: LoginRequest)
 
-    @GET("/products")
+    @GET("videos/")
     suspend fun getAllProducts(): List<ProductsDto>
 }

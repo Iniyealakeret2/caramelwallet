@@ -10,15 +10,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hsdesigns.caramelwallet.R
 import com.hsdesigns.caramelwallet.databinding.ItemsListRecyclerviewItemsBinding
 import com.hsdesigns.caramelwallet.feature_dashboard.data.remote.dto.ProductsDto
+import com.hsdesigns.caramelwallet.feature_dashboard.domain.model.Products
 
-class ListItemAdapter(private val listOfItems: List<ProductsDto>, val context: Context) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
+class ListItemAdapter(private val listOfItems: List<Products>, val context: Context) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
     inner class ViewHolder(view: View):RecyclerView.ViewHolder(view)  {
         private val binding: ItemsListRecyclerviewItemsBinding = ItemsListRecyclerviewItemsBinding.bind(view)
         var btn = binding.fragmentBuyNowBtn
         init {
             buyItemClickListener()
         }
-        fun bindViews(products: ProductsDto){
+        fun bindViews(products: Products){
             binding.idNumberTextTv.text = products.id
             binding.productNameTextTv.text = products.name
             binding.amountNameTextTv.text = products.amount.toString()

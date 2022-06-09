@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.hsdesigns.caramelwallet.databinding.FragmentFundWalletBinding
 import com.hsdesigns.caramelwallet.common.utils.*
 
 //import com.hsdesigns.caramelwallet.common.utils.showBottomNavigation
-
 
 class FundWalletFragment : Fragment() {
     private var _binding: FragmentFundWalletBinding? = null
@@ -41,10 +41,9 @@ class FundWalletFragment : Fragment() {
         with(binding){
             fragmentFundWalletBackArrowIv.setOnClickListener {  findNavController().popBackStack() }
             fragmentFundWalletBtn.setOnClickListener {
-                findNavController().navigate(com.hsdesigns.caramelwallet.feature_authentication.ui.view.FundWalletFragmentDirections.actionFundWalletFragmentToDashboardFragment())
+                findNavController().navigate(FundWalletFragmentDirections.actionFundWalletFragmentToDashboardFragment(), customNavAnimation().build())
             }
         }
-
     }
     override fun onDestroyView() {
         super.onDestroyView()

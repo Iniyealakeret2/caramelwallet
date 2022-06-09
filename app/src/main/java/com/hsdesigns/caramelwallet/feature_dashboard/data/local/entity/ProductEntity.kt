@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.hsdesigns.caramelwallet.feature_dashboard.domain.model.Products
 
-@Entity
+@Entity(tableName = "products")
 data class ProductEntity(
     @PrimaryKey
     val roomDbId: Int? = null,
@@ -12,7 +12,7 @@ data class ProductEntity(
     val name: String,
     val amount: Int
 ){
-    fun toProduct(): Products{
+    fun toProductEntity(): Products {
         return Products(
             id = id,
             name = name,
